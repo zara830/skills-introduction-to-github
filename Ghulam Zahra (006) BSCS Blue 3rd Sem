@@ -1,0 +1,1224 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN3J9hDIu00JfTfmtPhZkjj",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/zara830/skills-introduction-to-github/blob/main/Ghulam%20Zahra%20(006)%20BSCS%20Blue%203rd%20Sem\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vfngwSnoMIbJ",
+        "outputId": "30ba22c8-63bc-428d-f71f-6fa39db49eef"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter Student Name: Ghulam Zahra\n",
+            "Enter Roll Number: 006\n",
+            "Enter Degree Program: BSCS\n",
+            "Enter CGPA: 3.60\n",
+            "\n",
+            "===== Student Academic Profile =====\n",
+            "Name           : Ghulam Zahra\n",
+            "Roll Number    : 006\n",
+            "Degree Program : BSCS\n",
+            "CGPA           : 3.60\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Task 1: Student Academic Profile\n",
+        "student_name = input(\"Enter Student Name: \")\n",
+        "roll_number = input(\"Enter Roll Number: \")\n",
+        "degree_program = input(\"Enter Degree Program: \")\n",
+        "cgpa = float(input(\"Enter CGPA: \"))\n",
+        "\n",
+        "print(\"\\n===== Student Academic Profile =====\")\n",
+        "print(\"Name           :\", student_name)\n",
+        "print(\"Roll Number    :\", roll_number)\n",
+        "print(\"Degree Program :\", degree_program)\n",
+        "print(\"CGPA           :\", format(cgpa, \".2f\"))\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Task 2: Monthly Budget\n",
+        "\n",
+        "monthly_income = float(input(\"Enter Monthly Income: \"))\n",
+        "house_rent = float(input(\"Enter House Rent: \"))\n",
+        "utility_bills = float(input(\"Enter Utility Bills: \"))\n",
+        "other_expenses = float(input(\"Enter Other Expenses: \"))\n",
+        "\n",
+        "total_expenses = house_rent + utility_bills + other_expenses\n",
+        "remaining_balance = monthly_income - total_expenses\n",
+        "\n",
+        "print(\"\\n===== Monthly Budget Summary =====\")\n",
+        "print(f\"Total Expenses   : {total_expenses:.2f}\")\n",
+        "print(f\"Remaining Balance: {remaining_balance:.2f}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HoN8ud8GOH3h",
+        "outputId": "355f7195-4c70-4619-a354-499e8ee6b3d6"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter Monthly Income: 160000\n",
+            "Enter House Rent: 30000\n",
+            "Enter Utility Bills: 20000\n",
+            "Enter Other Expenses: 50000\n",
+            "\n",
+            "===== Monthly Budget Summary =====\n",
+            "Total Expenses   : 100000.00\n",
+            "Remaining Balance: 60000.00\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Task 3: Percentage Calculator\n",
+        "\n",
+        "obtained_marks = float(input(\"Enter Obtained Marks: \"))\n",
+        "total_marks = float(input(\"Enter Total Marks: \"))\n",
+        "\n",
+        "percentage = (obtained_marks / total_marks) * 100\n",
+        "\n",
+        "print(\"\\n===== Result =====\")\n",
+        "print(f\"Percentage: {percentage:.2f}%\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KY61gPoiObHF",
+        "outputId": "6dc0f78b-4e7b-443e-9239-2028b36ff9e4"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter Obtained Marks: 928\n",
+            "Enter Total Marks: 1100\n",
+            "\n",
+            "===== Result =====\n",
+            "Percentage: 84.36%\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Lab Task 4: Using Built-in Functions\n",
+        "\n",
+        "# Taking full name input\n",
+        "full_name = input(\"Enter your full name: \")\n",
+        "\n",
+        "\n",
+        "# Taking 5 subject marks and storing in a list\n",
+        "marks = []\n",
+        "\n",
+        "for i in range(5):\n",
+        "    mark = float(input(f\"Enter marks for subject {i+1}: \"))\n",
+        "    marks.append(mark)\n",
+        "\n",
+        "# Calculations using built-in functions\n",
+        "name_length = len(full_name)\n",
+        "marks_type = type(marks)\n",
+        "highest_marks = max(marks)\n",
+        "lowest_marks = min(marks)\n",
+        "total_marks = sum(marks)\n",
+        "average_marks = total_marks / len(marks)\n",
+        "absolute_difference = abs(highest_marks - lowest_marks)\n",
+        "rounded_average = round(average_marks, 2)\n",
+        "sorted_marks = sorted(marks)\n",
+        "\n",
+        "# Displaying results\n",
+        "print(\"\\n===== Student Analysis Report =====\")\n",
+        "print(\"Length of Name:\", name_length)\n",
+        "print(\"Data Type of Marks List:\", marks_type)\n",
+        "print(\"Highest Marks:\", highest_marks)\n",
+        "print(\"Lowest Marks:\", lowest_marks)\n",
+        "print(\"Total Marks:\", total_marks)\n",
+        "print(\"Average Marks:\", average_marks)\n",
+        "print(\"Absolute Difference (High - Low):\", absolute_difference)\n",
+        "print(\"Rounded Average (2 decimal places):\", rounded_average)\n",
+        "print(\"Sorted Marks:\", sorted_marks)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dAQCrz0-PIgy",
+        "outputId": "ca9f23fa-9f70-4393-f057-dfcfd8b2e2ba"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your full name: Ghulam Zahra\n",
+            "Enter marks for subject 1: 98\n",
+            "Enter marks for subject 2: 92\n",
+            "Enter marks for subject 3: 94\n",
+            "Enter marks for subject 4: 89\n",
+            "Enter marks for subject 5: 78\n",
+            "\n",
+            "===== Student Analysis Report =====\n",
+            "Length of Name: 12\n",
+            "Data Type of Marks List: <class 'list'>\n",
+            "Highest Marks: 98.0\n",
+            "Lowest Marks: 78.0\n",
+            "Total Marks: 451.0\n",
+            "Average Marks: 90.2\n",
+            "Absolute Difference (High - Low): 20.0\n",
+            "Rounded Average (2 decimal places): 90.2\n",
+            "Sorted Marks: [78.0, 89.0, 92.0, 94.0, 98.0]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# LAB TASK # 5 Take number input from user\n",
+        "num = abs(int(input(\"Enter a number: \")))  # abs() removes negative sign\n",
+        "\n",
+        "# Convert number to string to count digits\n",
+        "digits = len(str(num))\n",
+        "\n",
+        "# Check number of digits using if-elif-else\n",
+        "if digits == 1:\n",
+        "    print(\"Single digit\")\n",
+        "elif digits == 2:\n",
+        "    print(\"Double digit\")\n",
+        "elif digits == 3:\n",
+        "    print(\"Three digit\")\n",
+        "else:\n",
+        "    print(\"More than three digits\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Fndt4kI9Pbok",
+        "outputId": "ee6793db-ea37-4c8e-f0d6-511e09e54812"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 12\n",
+            "Double digit\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# LAB TASK # 6 Take input\n",
+        "num = float(input(\"Enter a number: \"))\n",
+        "\n",
+        "# Check condition\n",
+        "if num > 0:\n",
+        "    print(\"Positive\")\n",
+        "elif num < 0:\n",
+        "    print(\"Negative\")\n",
+        "else:\n",
+        "    print(\"Zero\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HlHo1TyZP5YG",
+        "outputId": "eb23b0ee-5540-488e-ef54-e3f3613814c4"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 1133\n",
+            "Positive\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 7 Input number\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "# % gives remainder\n",
+        "if num % 2 == 0:\n",
+        "    print(\"Even\")\n",
+        "else:\n",
+        "    print(\"Odd\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cLq3QzvoQCyC",
+        "outputId": "b1e8b652-5ba2-42bb-e373-d7b204e97849"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 7657\n",
+            "Odd\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# LAB TASK # 8 Input marks\n",
+        "marks = float(input(\"Enter marks: \"))\n",
+        "\n",
+        "# Check grade ranges\n",
+        "if 90 <= marks <= 100:\n",
+        "    print(\"Grade A\")\n",
+        "elif 80 <= marks <= 89:\n",
+        "    print(\"Grade B\")\n",
+        "elif 70 <= marks <= 79:\n",
+        "    print(\"Grade C\")\n",
+        "elif 60 <= marks <= 69:\n",
+        "    print(\"Grade D\")\n",
+        "else:\n",
+        "    print(\"Fail\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UIkBrDUaQH7H",
+        "outputId": "bc0aa7db-1832-4f5d-c560-2da574ae791e"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter marks: 68\n",
+            "Grade D\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 9 Input age\n",
+        "age = int(input(\"Enter age: \"))\n",
+        "\n",
+        "# Categorize age\n",
+        "if age < 13:\n",
+        "    print(\"Child\")\n",
+        "elif 13 <= age <= 19:\n",
+        "    print(\"Teenager\")\n",
+        "elif 20 <= age <= 59:\n",
+        "    print(\"Adult\")\n",
+        "else:\n",
+        "    print(\"Senior\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xhM0ger6QY74",
+        "outputId": "2b639c0c-9a46-4fc8-f586-437513bd6428"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter age: 34\n",
+            "Adult\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 10 Input two numbers\n",
+        "a = float(input(\"Enter first number: \"))\n",
+        "b = float(input(\"Enter second number: \"))\n",
+        "\n",
+        "# Compare numbers\n",
+        "if a > b:\n",
+        "    print(\"Greater number is:\", a)\n",
+        "elif b > a:\n",
+        "    print(\"Greater number is:\", b)\n",
+        "else:\n",
+        "    print(\"Both numbers are equal\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3tA_82ZWQhKo",
+        "outputId": "4990ad80-39cc-47bf-afd3-3ef7e6535630"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 2\n",
+            "Enter second number: 4\n",
+            "Greater number is: 4.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 11 Input year\n",
+        "year = int(input(\"Enter year: \"))\n",
+        "\n",
+        "# Leap year condition\n",
+        "if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):\n",
+        "    print(\"Leap Year\")\n",
+        "else:\n",
+        "    print(\"Not a Leap Year\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7kiSKmiwQu7L",
+        "outputId": "001fb2af-7694-41c4-9fe8-b168a555ee8b"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter year: 2010\n",
+            "Not a Leap Year\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# LAB TASK # 12 Input character and convert to lowercase\n",
+        "ch = input(\"Enter a character: \").lower()\n",
+        "\n",
+        "# Check vowel\n",
+        "if ch in \"aeiou\":\n",
+        "    print(\"Vowel\")\n",
+        "else:\n",
+        "    print(\"Consonant\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "REjFMJl9Q17M",
+        "outputId": "8d919f4f-16ab-4c23-fe83-a5a43abae2ef"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a character: *\n",
+            "Consonant\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 13 Input temperature\n",
+        "temp = float(input(\"Enter temperature in Celsius: \"))\n",
+        "\n",
+        "# Check weather condition\n",
+        "if temp < 0:\n",
+        "    print(\"Freezing\")\n",
+        "elif 0 <= temp <= 15:\n",
+        "    print(\"Cold\")\n",
+        "elif 16 <= temp <= 30:\n",
+        "    print(\"Moderate\")\n",
+        "else:\n",
+        "    print(\"Hot\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "088FB9qsQ84Q",
+        "outputId": "99167235-de35-4069-caed-c3931d41680a"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter temperature in Celsius: 55\n",
+            "Hot\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 14 Input three numbers\n",
+        "a = float(input(\"Enter first number: \"))\n",
+        "b = float(input(\"Enter second number: \"))\n",
+        "c = float(input(\"Enter third number: \"))\n",
+        "\n",
+        "# Find largest\n",
+        "if a >= b and a >= c:\n",
+        "    print(\"Largest is:\", a)\n",
+        "elif b >= a and b >= c:\n",
+        "    print(\"Largest is:\", b)\n",
+        "else:\n",
+        "    print(\"Largest is:\", c)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1qGLiPQCRD3-",
+        "outputId": "fbc82e60-1031-4b89-bace-77bb29a9b0aa"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 11\n",
+            "Enter second number: 33\n",
+            "Enter third number: 55\n",
+            "Largest is: 55.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# LAB TASK # 15 Input salary\n",
+        "salary = float(input(\"Enter salary: \"))\n",
+        "\n",
+        "# Calculate bonus\n",
+        "if salary >= 50000:\n",
+        "    bonus = salary * 0.10\n",
+        "elif salary >= 30000:\n",
+        "    bonus = salary * 0.05\n",
+        "else:\n",
+        "    bonus = 0\n",
+        "\n",
+        "print(\"Bonus:\", bonus)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nUM-51HqRKmq",
+        "outputId": "750594c3-278e-434c-c836-7e19a4197cef"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter salary: 50000\n",
+            "Bonus: 5000.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 16 Input number\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "# Check divisibility\n",
+        "if num % 5 == 0 and num % 11 == 0:\n",
+        "    print(\"Divisible by both 5 and 11\")\n",
+        "elif num % 5 == 0:\n",
+        "    print(\"Divisible by 5\")\n",
+        "elif num % 11 == 0:\n",
+        "    print(\"Divisible by 11\")\n",
+        "else:\n",
+        "    print(\"Not divisible by 5 or 11\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SsDM_atrRQYh",
+        "outputId": "aa9391bd-d325-4297-cf72-ce69a111db45"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 4\n",
+            "Not divisible by 5 or 11\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 17 Input attendance percentage\n",
+        "attendance = float(input(\"Enter attendance percentage: \"))\n",
+        "\n",
+        "# Check eligibility\n",
+        "if attendance >= 75:\n",
+        "    print(\"Allowed in exam\")\n",
+        "else:\n",
+        "    print(\"Not allowed\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g0RdNMrnRWLz",
+        "outputId": "64ef0b43-9d0f-4fa4-b1ac-e13883996c54"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter attendance percentage: 98\n",
+            "Allowed in exam\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 18 Input units consumed\n",
+        "units = float(input(\"Enter units consumed: \"))\n",
+        "\n",
+        "# Calculate bill based on units\n",
+        "if units <= 100:\n",
+        "    bill = units * 5\n",
+        "elif units <= 200:\n",
+        "    bill = units * 10\n",
+        "else:\n",
+        "    bill = units * 15\n",
+        "\n",
+        "print(\"Total Bill: Rs.\", bill)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mxQFj9L1RcTG",
+        "outputId": "1a80cd96-39ad-4f7b-b552-4cae132c733d"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter units consumed: 8\n",
+            "Total Bill: Rs. 40.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 19 Input number\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "# Check number type\n",
+        "if num > 0:\n",
+        "    if num % 2 == 0:\n",
+        "        print(\"Positive Even\")\n",
+        "    else:\n",
+        "        print(\"Positive Odd\")\n",
+        "elif num < 0:\n",
+        "    if num % 2 == 0:\n",
+        "        print(\"Negative Even\")\n",
+        "    else:\n",
+        "        print(\"Negative Odd\")\n",
+        "else:\n",
+        "    print(\"Zero\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Hk-EUGppRic5",
+        "outputId": "6579793e-7da1-40be-b6bc-938b121b5d5b"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 0\n",
+            "Zero\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 20 Input month number\n",
+        "month = int(input(\"Enter month number (1-12): \"))\n",
+        "\n",
+        "# Check number of days\n",
+        "if month in [1,3,5,7,8,10,12]:\n",
+        "    print(\"31 days\")\n",
+        "elif month in [4,6,9,11]:\n",
+        "    print(\"30 days\")\n",
+        "elif month == 2:\n",
+        "    print(\"28 or 29 days\")\n",
+        "else:\n",
+        "    print(\"Invalid month\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LtPhwFU-Rn3S",
+        "outputId": "a3e373fb-6b3d-4607-8534-cea10c7068e9"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter month number (1-12): 27\n",
+            "Invalid month\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 21 Input height\n",
+        "height = float(input(\"Enter height in cm: \"))\n",
+        "\n",
+        "# Classify height\n",
+        "if height < 150:\n",
+        "    print(\"Short\")\n",
+        "elif 150 <= height <= 170:\n",
+        "    print(\"Average\")\n",
+        "else:\n",
+        "    print(\"Tall\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vbO9PbJsRunl",
+        "outputId": "d9b7f3ce-edbc-4556-cd12-deed59c908f4"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter height in cm: 150\n",
+            "Average\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 22 Input two numbers\n",
+        "a = float(input(\"Enter first number: \"))\n",
+        "b = float(input(\"Enter second number: \"))\n",
+        "\n",
+        "# Input operator\n",
+        "op = input(\"Enter operator (+, -, *, /): \")\n",
+        "\n",
+        "# Perform operation\n",
+        "if op == \"+\":\n",
+        "    print(\"Result:\", a + b)\n",
+        "elif op == \"-\":\n",
+        "    print(\"Result:\", a - b)\n",
+        "elif op == \"*\":\n",
+        "    print(\"Result:\", a * b)\n",
+        "elif op == \"/\":\n",
+        "    if b != 0:\n",
+        "        print(\"Result:\", a / b)\n",
+        "    else:\n",
+        "        print(\"Division by zero not allowed\")\n",
+        "else:\n",
+        "    print(\"Invalid operator\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "N3dqXRSYR04B",
+        "outputId": "de79a35f-f999-4ec2-8685-e4fb98b83baf"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 4\n",
+            "Enter second number: 3\n",
+            "Enter operator (+, -, *, /): *\n",
+            "Result: 12.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 23 Input character\n",
+        "ch = input(\"Enter a character: \")\n",
+        "\n",
+        "# Check character type\n",
+        "if ch.isupper():\n",
+        "    print(\"Uppercase Letter\")\n",
+        "elif ch.islower():\n",
+        "    print(\"Lowercase Letter\")\n",
+        "elif ch.isdigit():\n",
+        "    print(\"Digit\")\n",
+        "else:\n",
+        "    print(\"Special Character\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BG-voM2USAVc",
+        "outputId": "37e8c6e3-f65a-4906-9c48-3067562a8dd1"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a character: D\n",
+            "Uppercase Letter\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def check_number(num):\n",
+        "    # LAB TASK # 24 Checks whether a number is positive, negative, or zero\n",
+        "    if num > 0:\n",
+        "        return \"Positive\"\n",
+        "    elif num < 0:\n",
+        "        return \"Negative\"\n",
+        "    else:\n",
+        "        return \"Zero\"\n",
+        "\n",
+        "# Example\n",
+        "print(check_number(10))  # Positive\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5dHyQh3PTBCZ",
+        "outputId": "76f4b9c4-591d-442e-ea73-1d3a2272b307"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Positive\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def check_even_odd(num):\n",
+        "    # LAB TASK # 25 Returns whether the number is even or odd\n",
+        "    if num % 2 == 0:\n",
+        "        return \"Even\"\n",
+        "    else:\n",
+        "        return \"Odd\"\n",
+        "\n",
+        "print(check_even_odd(7))  # Odd\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "K9r4gQ_rTENk",
+        "outputId": "caa3bec1-0bf7-4fc4-b7dc-84ba6f73ebae"
+      },
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Odd\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calculate_grade(marks):\n",
+        "    #LAB TASK # 26 Returns grade based on marks\n",
+        "    if marks >= 90:\n",
+        "        return \"A\"\n",
+        "    elif marks >= 75:\n",
+        "        return \"B\"\n",
+        "    elif marks >= 60:\n",
+        "        return \"C\"\n",
+        "    elif marks >= 50:\n",
+        "        return \"D\"\n",
+        "    else:\n",
+        "        return \"Fail\"\n",
+        "\n",
+        "print(calculate_grade(82))  # B\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ESFUPeslTKG-",
+        "outputId": "baf8a051-b802-4412-d511-ed2d8cfaf882"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "B\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def find_largest(a, b, c):\n",
+        "    # LAB TASK # 27 Returns the largest of three numbers\n",
+        "    if a >= b and a >= c:\n",
+        "        return a\n",
+        "    elif b >= a and b >= c:\n",
+        "        return b\n",
+        "    else:\n",
+        "        return c\n",
+        "\n",
+        "print(find_largest(5, 10, 3))  # 10\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dVk_ZBz5TMJy",
+        "outputId": "7b81efae-a55f-4ac1-f38c-ca0bf1a7b6de"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def leap_year(year):\n",
+        "    # LAB TASK # 28 Checks whether a year is a leap year\n",
+        "    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):\n",
+        "        return \"Leap Year\"\n",
+        "    else:\n",
+        "        return \"Not a Leap Year\"\n",
+        "\n",
+        "print(leap_year(2024))  # Leap Year\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4euCDny0TQ2y",
+        "outputId": "ed78286e-4e10-4a2d-9a78-f649a9259cdc"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Leap Year\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def check_vowel(char):\n",
+        "    #LAB TASK # 29 Determines if a character is a vowel or consonant\n",
+        "    vowels = \"aeiouAEIOU\"\n",
+        "    if char in vowels:\n",
+        "        return \"Vowel\"\n",
+        "    else:\n",
+        "        return \"Consonant\"\n",
+        "\n",
+        "print(check_vowel('a'))  # Vowel\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "56G15e5fTV2x",
+        "outputId": "e0283f52-b561-4b01-c0b1-76aa936640e0"
+      },
+      "execution_count": 38,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Vowel\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calculator(num1, num2, operator):\n",
+        "    #LAB TASK # 30 Performs +, -, *, / operations\n",
+        "    if operator == '+':\n",
+        "        return num1 + num2\n",
+        "    elif operator == '-':\n",
+        "        return num1 - num2\n",
+        "    elif operator == '*':\n",
+        "        return num1 * num2\n",
+        "    elif operator == '/':\n",
+        "        if num2 != 0:\n",
+        "            return num1 / num2\n",
+        "        else:\n",
+        "            return \"Cannot divide by zero\"\n",
+        "    else:\n",
+        "        return \"Invalid operator\"\n",
+        "\n",
+        "print(calculator(10, 5, '*'))  # 50\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XO-P-gwTTsgb",
+        "outputId": "4411ff79-24f8-4570-d37a-fe855a52b048"
+      },
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def age_category(age):\n",
+        "    # LAB TASK # 31 Classifies person as Child, Teenager, Adult, or Senior\n",
+        "    if age < 13:\n",
+        "        return \"Child\"\n",
+        "    elif age <= 19:\n",
+        "        return \"Teenager\"\n",
+        "    elif age <= 60:\n",
+        "        return \"Adult\"\n",
+        "    else:\n",
+        "        return \"Senior\"\n",
+        "\n",
+        "print(age_category(25))  # Adult\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "M8K9tvFuTyhj",
+        "outputId": "d089f7b0-b9dd-4449-8878-83f9104a2cf0"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Adult\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def temperature_status(temp):\n",
+        "    # LAB TASK # 32 Returns Freezing, Cold, Moderate, or Hot\n",
+        "    if temp <= 0:\n",
+        "        return \"Freezing\"\n",
+        "    elif temp <= 15:\n",
+        "        return \"Cold\"\n",
+        "    elif temp <= 30:\n",
+        "        return \"Moderate\"\n",
+        "    else:\n",
+        "        return \"Hot\"\n",
+        "\n",
+        "print(temperature_status(22))  # Moderate\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5Ff86n6ET4nt",
+        "outputId": "81b14410-62dc-4e3f-ce2f-3329ad64882b"
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Moderate\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LAB TASK # 33 @title Default title text\n",
+        "def check_divisibility(num):\n",
+        "    # Checks divisibility by 3, 5, both, or none\n",
+        "    if num % 3 == 0 and num % 5 == 0:\n",
+        "        return \"Divisible by both 3 and 5\"\n",
+        "    elif num % 3 == 0:\n",
+        "        return \"Divisible by 3\"\n",
+        "    elif num % 5 == 0:\n",
+        "        return \"Divisible by 5\"\n",
+        "    else:\n",
+        "        return \"Not divisible by 3 or 5\"\n",
+        "\n",
+        "print(check_divisibility(15))  # Divisible by both 3 and 5\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6hhbGlEYT9H-",
+        "outputId": "0aeef796-5d83-4eeb-cef4-f100f7e05143"
+      },
+      "execution_count": 44,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Divisible by both 3 and 5\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
